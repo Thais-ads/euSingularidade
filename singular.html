@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singular Saúde - Corretora de Plano de Saúde</title>
+ 
+  <link rel="stylesheet" href="./Estilos/Contato_styles.css">
+  <link rel="stylesheet" href="./Estilos/styles.css">
+  <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
+
+  <!--BootsTrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<style>
+    .QuemSomosSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items:  center;
+    align-items: center;
+    margin: 50px 0px 100px 0px;
+  }
+  
+
+  #picole{
+    background: white;
+    padding: 50px 20px 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+  }
+  #picole h1 {
+    margin-bottom: 100px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  #picole h2 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  #picole .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+    
+
+  #picole .card {
+    flex: 1;
+    max-width: 300px;
+    margin: 15px 50px 15px 50px;
+    padding: 30px 35px;
+    border-radius: 40px;
+    background: #fafafa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+    height: auto;
+    width: auto;
+  }
+</style>
+<body>
+  <!-- Header com Logo e Navegação -->
+  <header>
+    <div class="header-container">
+      <div class="header-logo">
+        <!-- Ajuste o link se quiser que o logo aponte para outra rota -->
+        <a href="/">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Singular Saúde Logo">
+        </a>
+      </div>
+  
+      <nav class="header-nav-pai">
+        <ul class="header-nav">
+            <!-- Item com dropdown -->
+            <li class="dropdown">
+                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="./singular.html">A Singular</a></li>
+                    <li><a href="./carreiras.html">Carreiras</a></li>
+                    <li><a href="./partners.html">Partners</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./quem-somos.html">Quem Somos?</a></li>
+            <li class="dropdown">
+              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <ul class="submenu">
+                  <li><a href="./contato.html">Contato</a></li>
+                  <li><a href="./FAQ.html">FAQ</a></li>
+              </ul>
+          </li>
+            
+            <!-- CTA Separado -->
+            <li class="header-cta">
+                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
+  <section id="hero">
+    <div class="hero-content">
+      <h1>A EXPERIÊNCIA DE SAÚDE DA
+        SUA EQUIPE PODE SER INCRÍVEL</h1>
+      <p>Unimos tecnologia e um time de especialistas 
+        para apoiar estrategicamente o RH nas empresas.</p>
+      <!-- Imagem adicional do Hero -->
+       <!-- CTA: redireciona para /contato -->
+       <a href="https://wa.me/5511949395089" class="cta-btn" style="margin-bottom: 40px;">Agendar uma conversa</a> 
+      
+
+       <section id="picole" >
+        
+        <div class="cards">
+          <div class="card" height="1000px" >
+            <div class="destaque-image">
+              <img src="Estilos/Img/image_singularidade/IMAGENS/img+txt.png"   ="">
+            </div>
+            
+        </div>
+       
+       
+
+          <div class="card">
+            <h3> SOLUÇÕES
+              INTEGRADAS</h3>
+            <p>  Aqui você tem uma gestão
+              centralizada e estratégica
+              dos benefícios em um só
+              lugar, guias de saúde
+              focado em criar
+              experiências incríveis para
+              seus colaboradores e
+              muitas outras vantagens.
+             </p>
+          </div>
+
+
+         
+ 
+          <div class="card">
+            <h3> GESTÃO
+              CENTRALIZADA</h3>
+            <p> Nossas soluções
+              integradas oferecem 
+             uma abordagem holística,
+              simplificando
+              a gestão de benefícios e
+              proporcionando uma
+              experiência de saúde mais
+              satisfatória.</p>
+          </div>
+      
+          
+        </div>
+       
+      </section>
+
+    </div>
+  </section>
+  <section class="QuemSomosSection" style="background-color: #f0f0f0; text-align: center; padding: 40px 20px;">
+    <div style="
+      position: relative;
+      padding: 50px;
+      width: 600px;
+      height: 400px;
+      margin: 0 auto;
+      align-items: center;
+      background: url('./Estilos/Img/image_quemsomos/FUNDADORES.png') left center / cover no-repeat;
+      border-radius: 20px;
+      overflow: hidden;
+    ">
+      <!-- Sobreposição branca -->
+      <div style="
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background:#f0f0f0  ;
+      "></div>
+    </div>
+  
+    <p style="font-size: 20px; max-width: 900px; margin: 30px auto; line-height: 1.6;">
+      “A Singular nasceu para cuidar da saúde das
+      pessoas, gerar insights e automatizar a vida do RH.
+      Nossa missão é simplificar e otimizar o acesso à
+      saúde para empresas e colaboradores.”
+    </p>
+  
+    <p><strong>DOUGLAS SILVA, COO & FOUNDER</strong></p>
+  </section>
+  
+
+<section id="picole" >
+  <h1 style="color: black;"> MENOS TRABALHO PARA VOCÊ,
+    MAIS EFICIÊNCIA PARA SUA
+    EMPRESA.</h1>
+  <div class="cards">
+    <div class="card">
+      <h3>INDICAÇÃO</h3>
+      <p> Seja a ponte entre a
+        Singular e empresas que
+        você conhece — clientes,
+        fornecedores, parceiros...
+        Todo mundo que você
+        sabe que merece um
+        plano de saúde que
+        funcione de verdade</p>
+      
+    </div>
+    <div class="card">
+      <h3>NEGOCIAÇÃO</h3>
+      <p>  A gente assume daqui.
+        Cada indicação sua que
+        virar parceria é também
+        uma nova fonte de receita
+        para você. Quanto mais
+        conexões, mais
+        possibilidades de ganho.
+        Simples assim.
+       </p>
+    </div>
+    <div class="card">
+      <h3>PAGAMENTO</h3>
+      <p> você recebe do jeito que
+        preferir. PIX, comissão
+        por contrato, parceria
+        fixa… Aqui você escolhe 
+       o formato que funciona
+        melhor pra você</p>
+    </div>
+
+    
+  </div>
+ 
+</section>
+
+
+  <section id="sobre" style="height: 400px; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h2>PRONTO PARA REVOLUCIONAR
+      A SAÚDE DA SUA EQUIPE?</h2>   
+    <!-- CTA: redireciona para /contato -->
+    <a href="https://wa.me/5511949395089" class="cta-btn-white" style="width: 400px; "> Quero uma demonstração</a>
+  </section>
+
+  <!-- Footer <section id="contato"> -->
+  <footer>
+
+    <section class="top-bar">
+      <a class="logo">
+        <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
+      </a>
+      <div class="reclame-aqui">
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+    </section>
+    
+    <hr>
+    <div class="faleComAgenteDivPai">
+
+      <div class="falaComAgenteFilho">
+        <h2>Fale com a gente</h2>
+        <div class="contato-info">
+          <p>(11) 2436-4766</p>
+          <p>(11) 97709-4841</p>         
+          <p> falecom@eusingularsaude.com.br</p>
+          <p> Atendimento das 9h às 18h (dias úteis) </p>
+          <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+        </div>
+        
+      </div>
+     
+      <div class="footer-links">
+        <h2> <strong>Links Rapidos</strong> </h2>
+        <a >Ajuda</a>
+        <a >Termos de uso</a>
+        <a >Política de privacidade</a>
+      </div>
+  
+    </div>
+
+
+      <hr>
+      <div class="paifilhos">
+        <div class="filho2">
+          <!-- Container para imagens à esquerda -->
+          <div class="imagens">
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+            </a>
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+            </a>
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+            </a>
+          </div>
+      
+          <!-- Container para textos à direita -->
+          <div class="textos">
+            <p>© 2025 All Rights Reserved Singular Saúde</p>
+            <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Selo do Reclame Aqui com link -->
+     
+    </div>
+  </footer> 
+    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
+    <i class="bi bi-whatsapp"></i>
+</body>
+</html>
+<script>
+  function toggleDropdown(element) {
+    const resposta = element.nextElementSibling;
+    const icone = element.querySelector("i");
+
+    if (resposta.style.display === "none") {
+      resposta.style.display = "block";
+      icone.classList.remove("bi-chevron-down");
+      icone.classList.add("bi-chevron-up");
+    } else {
+      resposta.style.display = "none";
+      icone.classList.remove("bi-chevron-up");
+      icone.classList.add("bi-chevron-down");
+    }
+  }
+</script>

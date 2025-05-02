@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singular Saúde - Corretora de Plano de Saúde</title>
+  <link rel="stylesheet" href="./Estilos/Contato_styles.css">
+  <link rel="stylesheet" href="./Estilos/styles.css">
+  <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
+
+  <!--BootsTrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<style>
+
+
+.sectionPoliticaPrivada {
+  text-align: left;            /* Alinha conteúdo à esquerda */
+  padding: 20px;               /* Espaçamento interno */
+  margin: 0 auto;              /* Centraliza horizontalmente */
+  max-width: 800px;            /* Largura máxima para conteúdo */
+  width: 100%;                 /* Ocupa toda a largura disponível até o limite */  /* (opcional) Cor de fundo */
+  box-sizing: border-box;  
+      /* Inclui padding na largura total */
+}
+
+
+
+  ul {
+    list-style-type: disc; /* Usa pontos como marcadores */
+    padding-left: 20px;    /* Espaçamento para que os pontos fiquem visíveis */
+  }
+
+  li {
+    margin-bottom: 8px;    /* Espaço entre os itens, opcional */
+  }
+
+  .SectionDetailPrivacidade{
+
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .SectionDetailPrivacidade img{
+    width: 350px;
+  }
+
+  #DivFilhoSectionDetailPrivacidade{
+    width: 800px;
+  }
+
+
+
+#DivFilhoSectionDetailPrivacidade > div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#DivFilhoSectionDetailPrivacidade > div:first-child > div {
+  flex: 1;
+}
+
+#DivFilhoSectionDetailPrivacidade img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #DivFilhoSectionDetailPrivacidade > div:first-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #DivFilhoSectionDetailPrivacidade > div:first-child > div {
+    align-items: center;
+  }
+
+  #DivFilhoSectionDetailPrivacidade h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+.box-atualizado {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 10px 16px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.box-atualizado p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+
+h2{
+  margin-bottom: 50px;
+  font-size: 40px;
+  color:  #041C6D;
+}
+  
+</style>
+
+<body>
+  <!-- Header com Logo e Navegação -->
+  <header>
+    <div class="header-container" >
+      <div class="header-logo">
+        <!-- Ajuste o link se quiser que o logo aponte para outra rota -->
+        <a href="/">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Singular Saúde Logo">
+        </a>
+      </div>
+  
+      <nav class="header-nav-pai">
+        <ul class="header-nav">
+            <!-- Item com dropdown -->
+            <li class="dropdown">
+                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="./singular.html">A Singular</a></li>
+                    <li><a href="./carreiras.html">Carreiras</a></li>
+                    <li><a href="./partners.html">Partners</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./quem-somos.html">Quem Somos?</a></li>
+            <li class="dropdown">
+              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <ul class="submenu">
+                  <li><a href="./contato.html">Contato</a></li>
+                  <li><a href="./FAQ.html">FAQ</a></li>
+              </ul>
+          </li>
+            
+            <!-- CTA Separado -->
+            <li class="header-cta">
+                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
+ 
+
+  <section class="SectionDetailPrivacidade" style="background: #f0f0f0;">
+    <div id="DivFilhoSectionDetailPrivacidade" style="display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          <div class="box-atualizado">
+            <p>Atualizado em: 15/03/2025</p>
+          </div>
+          
+          <h2>POLÍTICA DE PRIVACIDADE</h2>
+          <p> A Singular Saúde valoriza a privacidade
+            de seus usuários e está comprometida
+            em proteger os dados pessoais que você
+            compartilha conosco.</p>
+        </div>
+        
+        <img src="./Estilos/Img/image_politica_privacidade/privacidade-singular-saude.png" alt="Privacidade Singular Saúde">
+      </div>
+      
+
+      <p>Esta Política de Privacidade explica como coletamos, utilizamos, armazenamos e
+        protegemos suas informações ao acessar nosso site www.eusingularsaude.com.br
+        e utilizar nossos serviços. Nosso objetivo é garantir transparência e controle sobre
+        seus dados.</p>
+    </div>
+
+  </section>
+
+  <section >
+   <div class="sectionPoliticaPrivada" >
+    <h2>1. QUAIS SÃO OS
+      DADOS COLETADOS?</h2>   
+    <p><strong>Coletamos informações pessoais e não pessoais de diferentes formas:</strong></p>
+    <ul>
+      <li><strong>Fornecidos por você:</strong> Nome, e-mail, CPF, telefone, data de nascimento,
+        informações de pagamento e outros dados inseridos em formulários de
+        cadastro, consultas ou contatos conosco;</li>
+      <li><strong>Coletados automaticamente:</strong> Endereço IP, tipo de dispositivo, navegador,
+        sistema operacional, cookies, histórico de navegação no site e padrões de uso;</li>
+      <li><strong>De saúde:</strong> Informações relacionadas a consultas, exames, tratamentos ou
+        histórico médico, mediante consentimento explícito;</li>
+      <li><strong>De terceiros:</strong> Informações obtidas de parceiros ou fontes públicas, desde que
+        permitidas por lei;</li>
+    </ul>
+   </div>
+
+  </section>
+
+  <section style="background-color: #f0f0f0;" >
+    <div class="sectionPoliticaPrivada" >
+      <h2>2. COMO UTILIZAMOS
+        SEUS DADOS </h2>   
+      <p><strong>Utilizamos suas informações para:</strong></p>
+      <ul>
+        <li>Prestar serviços de saúde, como agendamento de consultas, envio de
+          resultados de exames e suporte ao cliente;</li>
+
+        <li>Melhorar nosso site e serviços, por meio de análises de uso e feedback;</li>
+
+        <li>Enviar comunicações, como lembretes de consultas; newsletters ou promoções,
+          mediante seu consentimento;</li>
+
+        <li>Cumprir obrigações legais ou regulatórias;</li>
+
+        <li>Proteger nossos direitos, segurança e propriedade, bem como os de nossos
+          usuários.</li>
+      </div>
+  </section>
+
+  <section class="sectionPoliticaPrivada">
+    <h2>3. BASE LEGAL PARA O
+      TRATAMENTO DE DADOS</h2>   
+    <p><strong>Conforme a LGPD (Lei nº 13.709/2018), processamos seus dados com base em:</strong></p>
+    <li>Seu consentimento, quando aplicável;</li>
+    <li>Execução de contrato ou prestação de serviços solicitados por você;</li>
+    <li>Cumprimento de obrigações legais;</li>
+    <li> Interesse legítimo da Singular Saúde, desde que não prejudiquem seus direitos.</li>
+  </section>
+
+  <section style="background-color: #f0f0f0;" >
+    <div class="sectionPoliticaPrivada" >
+      <h2>4. TRANSFERÊNCIA DE
+        DADOS PARA TERCEIROS</h2>   
+      <p><strong>Seus dados pessoais poderão também ser transferidos a terceiros, nos
+        seguintes casos:</strong></p>
+        <li>Profissionais de saúde e parceiros envolvidos na prestação de serviços;</li>
+        <li>Autoridades governamentais, quando exigido por lei ou para proteger direitos
+          legais;</li>
+        <li>Prestadores de serviços terceirizados (ex: empresas de TI, pagamento ou
+          marketing), sob contratos que garantem a segurança e confidencialidade dos
+          dados. Não vendemos ou alugamos seus dados pessoais a terceiros para fins
+          comerciais.</li>
+    </div>
+  </section>
+
+  <section class="sectionPoliticaPrivada" >
+    <h2>5. COOKIES E TECNOLOGIAS
+      SEMELHANTES</h2>   
+    <p>Utilizamos cookies e outras ferramentas para melhorar sua experiência, analisar o
+      tráfego e personalizar o conteúdo. Você pode gerenciar suas preferências de
+      cookies nas configurações do seu navegador.
+     </p>
+  </section>
+
+
+  <section style="background-color: #f0f0f0;" >
+    <div class="sectionPoliticaPrivada" >
+      <h2>6. SEGURANÇA DOS DADOS</h2>   
+      <p>Adotamos medidas técnicas e organizacionais para proteger seus dados contra
+        acesso não autorizado, perda ou uso indevido, como criptografia, firewalls e
+        controles de acesso. Trabalhamos continuamente para aprimorar nossa segurança,
+        mas apesar desses esforços, nenhum sistema é 100% seguro, e qualquer dado pode
+        se tornar publico. Ao consentir com esta política de privacidade, os usuários e
+        clientes entendem e assumem expressamente esse risco e concorda que a Singular
+        não será responsável por tal tipo de vazamento de dados.
+      </p>
+    </div>
+  </section>
+
+  <section class="sectionPoliticaPrivada">
+    <h2>7. SEUS DIREITOS</h2>   
+    <p><strong>Você tem os seguintes direitos em relação aos seus dados pessoais, conforme
+      a LGPD:</strong>
+    </p>
+    <li>Confirmar a existência de tratamento de dados;</li>
+    <li>Acessar seus dados;</li>
+    <li>Corrigir dados incompletos, inexatos ou desatualizados;</li>
+    <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários, ou
+      excessivos;</li>
+    <li>Revogar seu consentimento, quando aplicável;</li>
+    <li> Solicitar a portabilidade dos dados a outro fornecedor;</li>
+
+    <p><strong>Para exercer seus direitos, entre em contato conosco pelo e-mail
+      falecom@eusingularsaude.com.br ou pelo formulário disponível na página
+      contato em nosso site.</strong>
+
+  </section>
+  <section style="background-color: #f0f0f0;" >
+    <div class="sectionPoliticaPrivada" >
+      <h2>8. COMO ARMAZENAMOS AS
+        INFORMAÇÕES COLETADAS</h2>   
+      <p> Seus dados serão armazenados pelo tempo necessário para cumprir as finalidades
+        descritas nesta política ou conforme exigido por lei. Após esse período, os dados
+        serão excluídos ou anonimizados, salvo obrigações legais em contrário.
+      </p>
+    </div> 
+  </section>
+
+  <section class="sectionPoliticaPrivada">
+    <h2>9. TRANSFERÊNCIA
+      INTERNACIONAL DE DADOS</h2>   
+    <p>Seus dados poderão ser transferidos para outros países (ex.: para servidores em
+      nuvem), com garantias adequadas de proteção, conforme exigido pela LGPD.
+     </p>
+  </section>
+
+  <section style="background-color: #f0f0f0;" >
+    <div class="sectionPoliticaPrivada" >
+      <h2>10. ATUALIZAÇÕES DESTA
+        POLÍTICA</h2>   
+      <p> Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você
+        sobre mudanças significativas por e-mail ou por meio de um aviso em nosso site.
+        Recomendamos a revisão desta página regularmente.
+       </p>
+    
+    </div>
+   
+  </section>
+
+  <section class="sectionPoliticaPrivada">
+    <h2>11. CONTATO COM A
+      SINGULAR</h2>   
+    <p>Se você tiver dúvidas, sugestões ou reclamações sobre esta política, ou sobre o uso
+      de seus dados, entre em contato com nosso <strong>de Proteção de Dados
+        (DPO):</strong>  E-mail: falecom@eusingularsaude.com.br
+     </p>
+     <br>
+     <p>A Singular Saúde está comprometida em resolver suas preocupações de forma ágil
+      e transparente. Conte com a gente, sempre.     
+     </p>
+  </section>
+
+
+  
+  <!-- Footer <section id="contato"> -->
+  <footer>
+
+    <section class="top-bar">
+      <a class="logo">
+        <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
+      </a>
+      <div class="reclame-aqui">
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/5511949395089" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+    </section>
+    
+    <hr>
+    <div class="faleComAgenteDivPai">
+
+      <div class="falaComAgenteFilho">
+        <h2>Fale com a gente</h2>
+        <div class="contato-info">
+          <p>(11) 2436-4766</p>
+          <p>(11) 97709-4841</p>         
+          <p> falecom@eusingularsaude.com.br</p>
+          <p> Atendimento das 9h às 18h (dias úteis) </p>
+          <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+        </div>
+        
+      </div>
+     
+      <div class="footer-links">
+        <h2> <strong>Links Rapidos</strong> </h2>
+        <a >Ajuda</a>
+        <a >Termos de uso</a>
+        <a >Política de privacidade</a>
+      </div>
+  
+    </div>
+
+
+      <hr>
+      <div class="paifilhos">
+        <div class="filho2">
+          <!-- Container para imagens à esquerda -->
+          <div class="imagens">
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+            </a>
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+            </a>
+            <a target="_blank">
+              <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+            </a>
+          </div>
+      
+          <!-- Container para textos à direita -->
+          <div class="textos">
+            <p>© 2025 All Rights Reserved Singular Saúde</p>
+            <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Selo do Reclame Aqui com link -->
+     
+    </div>
+  </footer> 
+    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
+    <i class="bi bi-whatsapp"></i>
+</body>
+</html>

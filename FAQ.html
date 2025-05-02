@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singular Saúde - Corretora de Plano de Saúde</title>
+  <link rel="stylesheet" href="./Estilos/Contato_styles.css">
+  <link rel="stylesheet" href="./Estilos/styles.css">
+  <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
+
+  <!--BootsTrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+  <style>
+    
+.sectionPoliticaPrivada {
+  text-align: left;            /* Alinha conteúdo à esquerda */
+  padding: 20px;               /* Espaçamento interno */
+  margin: 0 auto;              /* Centraliza horizontalmente */
+  max-width: 800px;            /* Largura máxima para conteúdo */
+  width: 100%;                 /* Ocupa toda a largura disponível até o limite */  /* (opcional) Cor de fundo */
+  box-sizing: border-box;  
+      /* Inclui padding na largura total */
+}
+
+
+
+  ul {
+    list-style-type: disc; /* Usa pontos como marcadores */
+    padding-left: 20px;    /* Espaçamento para que os pontos fiquem visíveis */
+  }
+
+  li {
+    margin-bottom: 8px;    /* Espaço entre os itens, opcional */
+  }
+
+  .SectionDetailPrivacidade{
+
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .SectionDetailPrivacidade img{
+    width: 350px;
+  }
+
+  #DivFilhoSectionDetailPrivacidade{
+    width: 800px;
+  }
+  #DivFilhoSectionDetailPrivacidade > div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#DivFilhoSectionDetailPrivacidade > div:first-child > div {
+  flex: 1;
+}
+
+#DivFilhoSectionDetailPrivacidade img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #DivFilhoSectionDetailPrivacidade > div:first-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #DivFilhoSectionDetailPrivacidade > div:first-child > div {
+    align-items: center;
+  }
+
+  #DivFilhoSectionDetailPrivacidade h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+.box-atualizado {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 10px 16px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.box-atualizado p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+
+h2{
+  margin-bottom: 50px;
+  font-size: 40px;
+  color:  #041C6D;
+}
+  
+  </style>
+
+<body>
+  <!-- Header com Logo e Navegação -->
+  <header>
+    <div class="header-container">
+      <div class="header-logo">
+        <!-- Ajuste o link se quiser que o logo aponte para outra rota -->
+        <a href="/">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Singular Saúde Logo">
+        </a>
+      </div>
+  
+      <nav class="header-nav-pai">
+        <ul class="header-nav">
+            <!-- Item com dropdown -->
+            <li class="dropdown">
+                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="./singular.html">A Singular</a></li>
+                    <li><a href="./carreiras.html">Carreiras</a></li>
+                    <li><a href="./partners.html">Partners</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./quem-somos.html">Quem Somos?</a></li>
+            <li class="dropdown">
+              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <ul class="submenu">
+                  <li><a href="./contato.html">Contato</a></li>
+                  <li><a href="./FAQ.html">FAQ</a></li>
+              </ul>
+          </li>
+            
+            <!-- CTA Separado -->
+            <li class="header-cta">
+                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
+ 
+  <section class="SectionDetailPrivacidade" style="background: white;">
+    <div id="DivFilhoSectionDetailPrivacidade" style="display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: column;">
+          
+          
+          <h2>Perguntas Frequentes</h2>
+         
+        </div>
+        
+        <img src="Estilos/Img/Image_faq/IMAGENS/pag-faq-singular.png" alt="Privacidade Singular Saúde">
+      </div>
+      
+    </div>
+
+  </section>
+ 
+ 
+   
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)"> 
+          <h1 style="color: #041C6D;"> O que é um plano de saúde? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <p class="resposta" style="display: none;"> Um plano de saúde é um serviço que garante acesso a 
+          consultas, exames, internações, tratamentos e outros 
+          procedimentos médicos, conforme a cobertura contratada. Ele 
+          evita que você precise arcar com todos os custos do próprio 
+          bolso ou recorrer exclusivamente ao SUS, que pode ter longas 
+          filas e disponibilidade limitada em algumas especialidades.</P>
+
+        <hr style="width: 100%;">
+      </div>
+    
+    </div>
+     
+   
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;"> Como fazer um plano de saúde? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;"> Para contratar um plano de saúde, é necessário entrar em 
+          contato com um corretor. Na Singular Saúde, contamos com 
+          profissionais qualificados para encontrar a melhor opção para 
+          você. O processo inclui: 
+          1. Avaliação das suas necessidades específicas e envio de uma 
+          cotação. 
+          2. Escolha do plano e envio da documentação. 
+          3. Análise da operadora e ativação do plano.  
+          4. Suporte contínuo durante todo. </p>
+        <hr style="width: 100%;">
+      </div>
+    </div>
+
+
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">    Qual a diferença entre plano de saúde e seguro saúde? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">    O plano de saúde permite atendimento direto em uma rede 
+          credenciada. O seguro saúde funciona com reembolso: você 
+          paga e depois solicita o valor à seguradora, conforme o 
+          contrato. Ambos têm coberturas e regras distintas. </p>
+
+        <hr style="width: 100%;">
+      </div>
+    </div>
+   
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Qual a diferença entre plano empresarial e plano 
+            individual? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">    O plano empresarial costuma ter custo menor, mais agilidade 
+          na contratação e benefícios como redução de carência. Já o 
+          plano individual, embora mais fácil de contratar, tem 
+          mensalidades mais altas e reajustes regulados pela ANS, o 
+          que pode ser bom ou ruim dependendo do perfil do usuário. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+   
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Qual plano de saúde é o mais barato?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">   Os planos mais acessíveis geralmente oferecem: 
+          ● Cobertura ambulatorial (somente exames e consultas). 
+          ● Atendimento regional. 
+          ● Apenas os serviços obrigatórios definidos pela ANS.  </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+
+   
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">   O que é carência em um plano de saúde?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">É o tempo que você precisa aguardar após contratar o plano 
+          para poder utilizar determinados serviços. Esse prazo varia por 
+          operadora e tipo de plano. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+   
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;"> Quanto tempo leva para o plano começar a valer? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">   A ativação ocorre em até 24h úteis após a contratação. A 
+          utilização segue os prazos de carência definidos no contrato.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+   
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Quais os benefícios de contratar um plano de saúde pelo 
+            CNPJ? </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;"> • Economia: os valores são mais baixos do que planos 
+          individuais. 
+          • Inclusão de familiares como dependentes. 
+          • Carência reduzida. 
+          • Mais opções de operadoras e coberturas. 
+          • Possibilidade de abatimento fiscal como despesa da 
+          empresa.  </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+   
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Quem pode contratar um plano de saúde empresarial?</h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">  
+          Qualquer pessoa jurídica com CNPJ ativo pode contratar um 
+          plano empresarial — desde microempreendedores individuais 
+          (MEIs) até pequenas e médias empresas. Mesmo que sua 
+          empresa não tenha funcionários registrados, você ainda pode 
+          contratar um plano apenas para você e sua família, desde que 
+          esteja dentro das regras da operadora.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+    
+
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Posso contratar um plano de saúde empresarial apenas 
+            para mim e meus familiares, sem incluir funcionários?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">  Sim. Muitas operadoras permitem que você contrate um plano 
+          empresarial usando seu CNPJ e inclua apenas seus 
+          dependentes diretos. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+
+    
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Qual a quantidade mínima de pessoas para contratar um 
+            plano de saúde empresarial?   </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">Depende da operadora. Algumas aceitam a partir de 1 ou 2 
+          vidas no contrato. Outras exigem 3 ou mais. A Singular cuida 
+          disso pra você. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+    
+   
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;"> Quais documentos preciso para contratar um plano de 
+            saúde pelo CNPJ?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">  Contrato social, cartão CNPJ, documentos do responsável 
+          legal e dos dependentes. Em alguns casos, é preciso 
+          comprovar o vínculo entre os beneficiários e a empresa.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+    
+    
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Plano de saúde empresarial tem cobertura nacional?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;"> Isso depende do plano contratado. Existem planos com 
+          cobertura regional, estadual e nacional. Nós te ajudamos a 
+          escolher o que faz mais sentido para você.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+
+
+    
+ 
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;"> É possível fazer portabilidade de plano de saúde 
+            empresarial?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">Sim. Caso você já tenha um plano e deseje trocar, pode 
+          solicitar portabilidade de carências (seguindo critérios da ANS). 
+          A Singular cuida de toda a burocracia.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+   
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">   Plano de saúde empresarial pode ser cancelado pela 
+            operadora?   </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">Apenas em casos específicos, como inadimplência prolongada 
+          ou fraude. A Singular acompanha sua jornada do início ao fim 
+          — aqui você não é deixado na mão. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+    
+   
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  MEI pode contratar plano de saúde empresarial?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;"> Sim. Se você tem um CNPJ ativo como MEI, pode contratar 
+          um plano de saúde empresarial com valores mais acessíveis.</P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+
+    
+    
+
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">  Qual a diferença entre plano com e sem coparticipação?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;">No modelo com coparticipação, você paga menos por mês e 
+          paga uma taxa por uso de consultas, exames ou internações. 
+          No sem coparticipação, a mensalidade é mais alta, mas você 
+          não paga nada a mais ao usar. </P>
+          <hr style="width: 100%;">
+      </div>
+    </div>
+   
+    
+    <div style="width: 100%;">
+      <div class="nossaOportunidadeInfo">
+        <div class="nossaOportunidadeInfoFilho"  onclick="toggleDropdown(this)">
+          <h1 style="color: #041C6D;">   Como comparar planos de saúde empresariais?  </h1>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <p class="resposta" style="display: none;"> Você deve avaliar cobertura, rede credenciada, preço, tipo de 
+          contratação (com ou sem coparticipação), carências e 
+          reputação da operadora. </P>
+         
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="sobre" style="height: 400px; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h2>AINDA TEM ALGUMA DÚVIDA?</h2>   
+    <!-- CTA: redireciona para /contato -->
+    <a href="https://wa.me/5511949395089" class="cta-btn-white" style="width: 400px; ">Fale com nosso time</a>
+  </section>
+
+  <section ">
+
+   
+
+  <!-- Footer <section id="contato"> -->
+    <footer style="background-color: #f0f0f0;">
+
+      <section class="top-bar">
+        <a class="logo">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
+        </a>
+        <div class="reclame-aqui">
+          <a href="https://wa.me/5511949395089" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://wa.me/5511949395089" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/5511949395089" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </section>
+      
+      <hr>
+      <div class="faleComAgenteDivPai">
+  
+        <div class="falaComAgenteFilho">
+          <h2>Fale com a gente</h2>
+          <div class="contato-info">
+            <p>(11) 2436-4766</p>
+            <p>(11) 97709-4841</p>         
+            <p> falecom@eusingularsaude.com.br</p>
+            <p> Atendimento das 9h às 18h (dias úteis) </p>
+            <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+          </div>
+          
+        </div>
+       
+        <div class="footer-links">
+          <h2> <strong>Links Rapidos</strong> </h2>
+          <a >Ajuda</a>
+          <a >Termos de uso</a>
+          <a >Política de privacidade</a>
+        </div>
+    
+      </div>
+  
+  
+        <hr>
+        <div class="paifilhos">
+          <div class="filho2">
+            <!-- Container para imagens à esquerda -->
+            <div class="imagens">
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+              </a>
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+              </a>
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+              </a>
+            </div>
+        
+            <!-- Container para textos à direita -->
+            <div class="textos">
+              <p>© 2025 All Rights Reserved Singular Saúde</p>
+              <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Selo do Reclame Aqui com link -->
+       
+      </div>
+    </footer> 
+    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
+    <i class="bi bi-whatsapp"></i>
+</body>
+</html>
+
+
+<script>
+  function toggleDropdown(element) {
+    const resposta = element.nextElementSibling;
+    const icone = element.querySelector("i");
+
+    if (resposta.style.display === "none") {
+      resposta.style.display = "block";
+      icone.classList.remove("bi-chevron-down");
+      icone.classList.add("bi-chevron-up");
+    } else {
+      resposta.style.display = "none";
+      icone.classList.remove("bi-chevron-up");
+      icone.classList.add("bi-chevron-down");
+    }
+  }
+</script>
