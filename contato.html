@@ -233,30 +233,34 @@
 
   <script src="script.js"></script>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-  
-      const nome = document.getElementById('name').value;
-      const telefone = document.getElementById('phone').value;
-      const email = document.getElementById('email').value;
-      const mensagem = document.getElementById('message').value;
-  
-      const texto = `Olá, gostaria de solicitar contato. Seguem meus dados:
-        *Nome:* ${nome}
-        *Telefone:* ${telefone}
-        *Email:* ${email}
-        *Mensagem:* ${mensagem}`;
-        
-      const textoCodificado = encodeURIComponent(texto);
-  
-      // Forçar uso do WhatsApp Web
-      const numero = '5511965672068';
-      const urlWhatsAppWeb = `https://web.whatsapp.com/send?phone=${numero}&text=${textoCodificado}`;
-  
-      window.open(urlWhatsAppWeb, '_blank');
-    });
-  </script>
+ <script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('name').value;
+    const telefone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('message').value;
+
+    const texto = `Olá, tudo bem?
+
+Gostaria de solicitar um contato da equipe. Seguem meus dados:
+
+🔹 Nome: ${nome}
+🔹 Telefone: ${telefone}
+🔹 E-mail: ${email}
+🔹 Mensagem: ${mensagem}
+
+Aguardo retorno. Obrigado!`;
+
+    const textoCodificado = encodeURIComponent(texto);
+    const numero = '5511965672068';
+    const urlWhatsAppWeb = `https://web.whatsapp.com/send?phone=${numero}&text=${textoCodificado}`;
+
+    window.open(urlWhatsAppWeb, '_blank');
+  });
+</script>
+
   
   
 </body>
