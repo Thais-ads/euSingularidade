@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singular Saúde - Corretora de Plano de Saúde</title>
+  <title>Faça parte da revolução | Singular Saúde</title>
+  <meta name="description" content="Junte-se ao time que está transformando a forma como as pessoas se conectam com a saúde. Descubra nossas oportunidades de carreira e cresça com a gente.">
   <link rel="stylesheet" href="./Estilos/Contato_styles.css">
   <link rel="stylesheet" href="./Estilos/styles.css">
   <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!--BootsTrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
@@ -22,6 +26,189 @@
   .nossaOportunidadeInfo i{
     font-size: 30px; 
   }
+
+  /* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .quemSomosTexto {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .quemSomosImg {
+    max-width: 100%;
+  }
+
+  .QuemSomosSection {
+    padding: 20px 15px;
+  }
+}
+.img-perfil {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%; /* se quiser manter arredondado */
+  margin-bottom: 30px;
+}
+
+
+/* Oportunidades */
+
+.oportunidades-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  width: 100%;
+}
+
+.titulo-oportunidades {
+  color: black;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.oportunidade {
+  width: 100%;
+  max-width: 1500px;
+  margin-bottom: 20px;
+}
+
+.oportunidade-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.oportunidade-info h1 {
+  color: #041C6D;
+  font-size: 20px;
+  margin: 0;
+}
+
+.oportunidade-info p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.oportunidade hr {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .oportunidade-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .oportunidade-info h1,
+  .oportunidade-info p {
+    font-size: 16px;
+    
+  }
+
+  .titulo-oportunidades {
+    font-size: 20px;
+  }
+  
+}
+
+
+/*Modal*/
+ /* Modal */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal.active .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+/* Remova a propriedade inline do HTML */
+
+  .close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  button[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0C2996;;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: none; /* impede que o usuário altere o tamanho */
+  line-height: 1.5;
+  height: 3.5rem; /* ajusta a altura visual para algo próximo do input */
+}
+
+
 </style>
 
 <body>
@@ -36,10 +223,11 @@
       </div>
   
       <nav class="header-nav-pai">
+        <i class="bi bi-list" id="menu-toggle"></i>
         <ul class="header-nav">
             <!-- Item com dropdown -->
             <li class="dropdown">
-                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <a>Sobre <i class="bi bi-chevron-down"></i></a>
                 <ul class="submenu">
                     <li><a href="./singular.html">A Singular</a></li>
                     <li><a href="./carreiras.html">Carreiras</a></li>
@@ -47,10 +235,10 @@
                 </ul>
             </li>
     
-            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./index.html">Singularidade</a></li>
             <li><a href="./quem-somos.html">Quem Somos?</a></li>
             <li class="dropdown">
-              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <a>Ajuda <i class="bi bi-chevron-down"></i></a>
               <ul class="submenu">
                   <li><a href="./contato.html">Contato</a></li>
                   <li><a href="./FAQ.html">FAQ</a></li>
@@ -59,7 +247,7 @@
             
             <!-- CTA Separado -->
             <li class="header-cta">
-                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+                <a href="https://wa.me/5511977094841" class="btn-chamada">Fale com a Singular</a>
             </li>
         </ul>
       </nav>
@@ -70,10 +258,10 @@
     <div class="hero-content">
       <h1> EXISTE UM MERCADO PARA TRANSFORMAR. <br>E ESPAÇO PARA VOCÊ CRESCER.</h1>
       <br>
-       <a href="https://wa.me/5511949395089" class="cta-btn" style="margin-bottom: 100px;">Agende uma conversa</a> 
+       <a href="https://wa.me/5511977094841" class="cta-btn" style="margin-bottom: 100px;">Agende uma conversa</a> 
       
        <div class="destaque-image">
-        <img src="./Estilos/Img/image_carreiras/sessão-carreiras.png" alt="Plano de Saúde Ideal">
+        <img src="./Estilos/Img/image_carreiras/carreiras.png" alt="Plano de Saúde Ideal">
        </div>
 
     </div>
@@ -126,7 +314,7 @@
   </section>
   
   <section id="sobre">
-    <img src="./Estilos/Img/image_carreiras/FUNDADORES.png" alt="Imagem">
+      <img class="img-perfil" src="Estilos/Img/image_quemsomos/perfil2_recortado.png" alt="Melhor Corretora de Saúde">
     <p>“Somos uma comunidade unida por valores sólidos e
       uma visão compartilhada. Juntos, criamos uma cultura
       que <strong>promove a inovação, encoraja a colaboração</strong> e
@@ -181,37 +369,34 @@
   </section>
 
 
-  <section style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 0px;">
-
-    <h1 style="color: black; margin-bottom: 50px;">NOSSAS
-      OPORTUNIDADES</h1>
-    <div style="width: 100%;">
-      <div class="nossaOportunidadeInfo">
-        <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%; margin-bottom: 20px;"> 
-          <h1 style="color: #041C6D;">Inside Sales</h1>
-          <p>São Paulo, Rio de Janeiro e New York(EUA)</p>
-        </div>
-        <hr style="width: 100%;">
+  
+  <section class="oportunidades-section">
+    <h1 class="titulo-oportunidades">NOSSAS OPORTUNIDADES</h1>
+  
+    <div class="oportunidade">
+      <div class="oportunidade-info">
+        <h1>Inside Sales</h1>
+        <p>São Paulo, Rio de Janeiro e New York(EUA)</p>
       </div>
-    
+      <hr>
     </div>
-   
-    <div style="width: 100%;">
-      <div class="nossaOportunidadeInfo">
-        <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;  margin-bottom: 20px;">
-          <h1 style="color: #041C6D;">Sales Development Representative</h1>
-          <p>São Paulo, Rio de Janeiro e New York(EUA)</p>
-        </div>
-        <hr style="width: 100%;">
+  
+    <div class="oportunidade">
+      <div class="oportunidade-info">
+        <h1>Sales Development Representative</h1>
+        <p>São Paulo, Rio de Janeiro e New York(EUA)</p>
       </div>
+      <hr>
     </div>
   </section>
+  
+  
 
   
   <section id="sobre">
     <h2>PRONTO PARA SE JUNTAR AO TIME?</h2>   
     <!-- CTA: redireciona para /contato -->
-    <a href="https://wa.me/5511949395089" class="cta-btn-white">Quero me candidatar</a>
+    <a id="AbrirModalQueroMeCandidatar" class="cta-btn-white">Quero me candidatar</a>
   </section>
 
 
@@ -299,97 +484,204 @@
 
 
   <!-- Footer <section id="contato"> -->
-  <footer>
-    
-    <section class="top-bar">
-      <a class="logo">
-        <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
-      </a>
-      <div class="reclame-aqui">
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-      </div>
-    </section>
-    
-    <hr>
-    <div class="faleComAgenteDivPai">
+    <footer>
 
-      <div class="falaComAgenteFilho">
-        <h2>Fale com a gente</h2>
-        <div class="contato-info">
-          <p>(11) 2436-4766</p>
-          <p>(11) 97709-4841</p>         
-          <p> falecom@eusingularsaude.com.br</p>
-          <p> Atendimento das 9h às 18h (dias úteis) </p>
-          <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+      <section class="top-bar">
+        <a class="logo">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
+        </a>
+        <div class="reclame-aqui">
+          <a href="https://www.linkedin.com/company/singularsaude" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/eusingularsaude/" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/5511977094841" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
         </div>
-        
-      </div>
-     
-      <div class="footer-links">
-        <h2> <strong>Links Rapidos</strong> </h2>
-        <a >Ajuda</a>
-        <a >Termos de uso</a>
-        <a >Política de privacidade</a>
+      </section>
+      
+      <hr>
+      <div class="faleComAgenteDivPai">
+  
+        <div class="falaComAgenteFilho">
+          <h2>Fale com a gente</h2>
+          <div class="contato-info">
+            <p>(11) 97709-4841</p>         
+            <p>falecom@eusingularsaude.com.br</p>
+            <p>Atendimento das 9h às 18h (dias úteis) </p>
+            <p><strong>Atendimento em outras línguas e libras</strong> </p>
+          </div>
+          
+        </div>
+       
+        <div class="footer-links">
+          <h2> <strong>Links Rapidos</strong> </h2>
+          <a >Ajuda</a>
+          <a >Termos de uso</a>
+          <a >Política de privacidade</a>
+        </div>
+    
       </div>
   
-    </div>
-
-
-      <hr>
-      <div class="paifilhos">
-        <div class="filho2">
-          <!-- Container para imagens à esquerda -->
-          <div class="imagens">
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
-            </a>
-          </div>
-      
-          <!-- Container para textos à direita -->
-          <div class="textos">
-            <p>© 2025 All Rights Reserved Singular Saúde</p>
-            <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+  
+        <hr>
+        <div class="paifilhos">
+          <div class="filho2">
+            <!-- Container para imagens à esquerda -->
+            <div class="imagens">
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+              </a>
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+              </a>
+              <a href="https://www.reclameaqui.com.br/empresa/singular-corretora-de-seguros/">
+                <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+              </a>
+            </div>
+        
+            <!-- Container para textos à direita -->
+            <div class="textosRodaPe">
+              <p>© 2025 All Rights Reserved Singular Saúde</p>
+              <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+            </div>
           </div>
         </div>
+        
+        
+        <!-- Selo do Reclame Aqui com link -->
+       
       </div>
-      
-      
-      <!-- Selo do Reclame Aqui com link -->
-     
-    </div>
-  </footer> 
-    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
-    <i class="bi bi-whatsapp"></i>
-</body>
+    </footer> 
+  <!-- 
+      <a href="https://wa.me/5511977094841" target="_blank" class="BtnWhatsFixo">
+      <i class="bi bi-whatsapp"></i>
+      -->
+<div id="carreirasModal" class="modal"> 
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">&times;</span>
+    <h2>Seja parte da mudança!</h2>
+    <p>Preencha seus dados e aguarde nosso contato.</p>
+
+    <form id="contact-form">
+      <label for="nome">Nome e sobrenome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="cargodesejado">Cargo desejado:</label>
+      <input type="text" id="cargodesejado" name="cargodesejado" required />
+
+      <label for="telefone">Telefone (com DDD):</label>
+      <input type="tel" id="telefone" name="telefone" required
+             pattern="\(\d{2}\)\s\d{4,5}-\d{4}" 
+             placeholder="(11) 91234-5678" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <!--
+            <label for="curriculo">Currículo:</label>
+            <input type="file" id="curriculo" name="curriculo" required />
+      -->
+
+      <label for="linkedin">LinkedIn:</label>
+      <input type="text" id="linkedin" name="linkedin" />
+
+      <label for="vaga">Como soube da vaga?</label>
+      <textarea type="text" id="vaga" name="vaga" rows="4"  required></textarea>
+
+      <button type="submit">Quero ser parceiro!</button>
+    </form>
+  </div>
+</div>
 </html>
 
 <script>
-  function toggleDropdown(element) {
-    const resposta = element.nextElementSibling;
-    const icone = element.querySelector("i");
+ // Função para abrir o modal corretamente
+function openModal() {
+  const modal = document.getElementById("carreirasModal");
+  modal.style.display = 'flex'; // Força o display antes da animação
+  setTimeout(() => {
+    modal.classList.add('active');
+  }, 10);
+}
 
-    if (resposta.style.display === "none") {
-      resposta.style.display = "block";
-      icone.classList.remove("bi-chevron-down");
-      icone.classList.add("bi-chevron-up");
-    } else {
-      resposta.style.display = "none";
-      icone.classList.remove("bi-chevron-up");
-      icone.classList.add("bi-chevron-down");
-    }
+// Função para fechar o modal
+function closeModal() {
+  const modal = document.getElementById("carreirasModal");
+  modal.classList.remove('active');
+  
+  // Resetar display após animação
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 500);
+}
+
+// Event Listeners atualizados
+document.getElementById("AbrirModalQueroMeCandidatar").addEventListener("click", function(e) {
+  e.preventDefault();
+  openModal();
+});
+
+document.getElementById("closeModal").addEventListener("click", closeModal);
+
+window.addEventListener("click", function(e) {
+  if (e.target === document.getElementById("carreirasModal")) {
+    closeModal();
   }
-</script>
+});
+
+// Submit do formulário
+
+
+/*
+document.getElementById("carreirasForm").addEventListener("submit", function(e) {
+
+});
+
+*/
+
+  const phoneInput = document.getElementById("telefone");
+  phoneInput.addEventListener("input", function(e) {
+    let value = e.target.value.replace(/\D/g, ""); // remove tudo que não for número
+
+    if (value.length > 11) value = value.slice(0, 11); // limita a 11 dígitos
+
+    if (value.length >= 2) {
+      value = "(" + value.slice(0, 2) + ") " + value.slice(2);
+    }
+    if (value.length >= 10) {
+      value = value.slice(0, 10) + "-" + value.slice(10);
+    } else if (value.length >= 9) {
+      value = value.slice(0, 9) + "-" + value.slice(9);
+    }
+
+    e.target.value = value;
+  });
+
+   (function(){
+      emailjs.init({
+        publicKey: "E_M-HA1isXfL-37ns",
+      });
+   })();
+
+   document.getElementById('contact-form').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    emailjs.sendForm('service_ziwl7z8', 'template_xpwtoov', this);
+
+  event.preventDefault();
+    Swal.fire({
+    icon: 'success',
+    title: 'Sucesso!',
+    text: 'Recebemos sua candidatura e logo entraremos em contato. Obrigado por querer crescer com a gente!',
+    confirmButtonColor: '#6200ea'
+  });
+
+  closeModal();
+
+   });
+
+</script> 

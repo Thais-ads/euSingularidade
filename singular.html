@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singular Saúde - Corretora de Plano de Saúde</title>
- 
+  <title>Singularidade | Singular + RH</title>
+  <meta name="description" content="Descubra como a Singular simplifica a gestão de saúde da sua equipe com soluções integradas, insights estratégicos e atendimento humanizado. Mais eficiência para o RH e mais cuidado para os colaboradores.">
   <link rel="stylesheet" href="./Estilos/Contato_styles.css">
   <link rel="stylesheet" href="./Estilos/styles.css">
   <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
 
 </head>
 <style>
-    .QuemSomosSection{
+  .QuemSomosSection{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,15 +25,31 @@
   
 
   #picole{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background: white;
     padding: 50px 20px 100px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
+    gap: 70px;
+    margin-top: 70px;
+
   }
+
+  #carrosselDeElementos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 50px 20px 100px;
+    text-align: center;
+    gap: 70px;
+    margin-top: 70px;
+
+  }
+
   #picole h1 {
     margin-bottom: 100px;
     font-size: 2.2rem;
@@ -47,27 +63,171 @@
     letter-spacing: 1px;
   }
 
+  #picole h3 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
   #picole .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-    
+  #carrosselDeElementos .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+  }
 
-  #picole .card {
+  #carrosselDeElementos .card{
     flex: 1;
-    max-width: 300px;
-    margin: 15px 50px 15px 50px;
-    padding: 30px 35px;
+    padding: 20px 20px;
     border-radius: 40px;
     background: #fafafa;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     text-align: left;
     height: auto;
-    width: auto;
+    width: 450px;
+    text-align: justify;
   }
+
+    
+
+  #picole .card {
+    flex: 1;
+    padding: 30px 40px;
+    border-radius: 40px;
+    background: #fafafa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+    height: auto;
+    width: 450px;
+    text-align: justify;
+  }
+
+  #picole img{
+    width: 750px;
+  }
+
+  #carrosselDeElementos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+      padding: 60px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .carousel-container {
+      width: 80%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      overflow-x: auto;
+      padding-bottom: 20px;
+    }
+
+    .card-carrosel {
+      flex: 0 0 60%;
+      scroll-snap-align: center;
+      margin: 0 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      min-height: 250px;
+    }
+
+    .indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: lightgray;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .indicator.active {
+      background: #0033cc;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    /* Oculta a barra de rolagem */
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .img-perfil {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%; /* se quiser manter arredondado */
+      margin-bottom: 30px;
+    }
+
+  @media (max-width: 600px) {
+    #picole {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    #picole img{
+      width: 95%;
+      margin-bottom: 50px;
+    }
+
+    .card p{
+      width: 90%;
+      font-size: 9px;
+
+    }
+
+    #picole h3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+
+    }
+
+
+  }
+
 </style>
 <body>
   <!-- Header com Logo e Navegação -->
@@ -81,10 +241,11 @@
       </div>
   
       <nav class="header-nav-pai">
+        <i class="bi bi-list" id="menu-toggle"></i>
         <ul class="header-nav">
             <!-- Item com dropdown -->
             <li class="dropdown">
-                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <a>Sobre <i class="bi bi-chevron-down"></i></a>
                 <ul class="submenu">
                     <li><a href="./singular.html">A Singular</a></li>
                     <li><a href="./carreiras.html">Carreiras</a></li>
@@ -92,10 +253,10 @@
                 </ul>
             </li>
     
-            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./index.html">Singularidade</a></li>
             <li><a href="./quem-somos.html">Quem Somos?</a></li>
             <li class="dropdown">
-              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <a>Ajuda <i class="bi bi-chevron-down"></i></a>
               <ul class="submenu">
                   <li><a href="./contato.html">Contato</a></li>
                   <li><a href="./FAQ.html">FAQ</a></li>
@@ -104,7 +265,7 @@
             
             <!-- CTA Separado -->
             <li class="header-cta">
-                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+                <a href="https://wa.me/5511977094841" class="btn-chamada">Fale com a Singular</a>
             </li>
         </ul>
       </nav>
@@ -119,21 +280,14 @@
         para apoiar estrategicamente o RH nas empresas.</p>
       <!-- Imagem adicional do Hero -->
        <!-- CTA: redireciona para /contato -->
-       <a href="https://wa.me/5511949395089" class="cta-btn" style="margin-bottom: 40px;">Agendar uma conversa</a> 
+       <a href="https://wa.me/5511977094841" class="cta-btn" style="margin-bottom: 40px;">Agendar uma conversa</a> 
       
-
        <section id="picole" >
-        
-        <div class="cards">
-          <div class="card" height="1000px" >
-            <div class="destaque-image">
-              <img src="Estilos/Img/image_singularidade/IMAGENS/img+txt.png"   ="">
-            </div>
-            
-        </div>
-       
-       
+      
+        <img src="Estilos/Img/image_singularidade/IMAGENS/img+txt.png" >
 
+            
+        <div style="display: flex; flex-direction: column; gap: 70px;">
           <div class="card">
             <h3> SOLUÇÕES
               INTEGRADAS</h3>
@@ -147,8 +301,6 @@
               muitas outras vantagens.
              </p>
           </div>
-
-
          
  
           <div class="card">
@@ -164,7 +316,7 @@
               satisfatória.</p>
           </div>
       
-          
+        </div>
         </div>
        
       </section>
@@ -172,81 +324,109 @@
     </div>
   </section>
   <section class="QuemSomosSection" style="background-color: #f0f0f0; text-align: center; padding: 40px 20px;">
-    <div style="
-      position: relative;
-      padding: 50px;
-      width: 600px;
-      height: 400px;
-      margin: 0 auto;
-      align-items: center;
-      background: url('./Estilos/Img/image_quemsomos/FUNDADORES.png') left center / cover no-repeat;
-      border-radius: 20px;
-      overflow: hidden;
-    ">
-      <!-- Sobreposição branca -->
-      <div style="
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background:#f0f0f0  ;
-      "></div>
-    </div>
-  
+    <img class="img-perfil" src="Estilos/Img/image_quemsomos/perfil1_recortado.png" alt="Melhor Corretora de Saúde">
     <p style="font-size: 20px; max-width: 900px; margin: 30px auto; line-height: 1.6;">
-      “A Singular nasceu para cuidar da saúde das
+      <strong>“A Singular nasceu para cuidar da saúde das
       pessoas, gerar insights e automatizar a vida do RH.
       Nossa missão é simplificar e otimizar o acesso à
-      saúde para empresas e colaboradores.”
+      saúde para empresas e colaboradores.”</strong>
     </p>
   
     <p><strong>DOUGLAS SILVA, COO & FOUNDER</strong></p>
   </section>
   
 
-<section id="picole" >
+<section id="carrosselDeElementos" >
   <h1 style="color: black;"> MENOS TRABALHO PARA VOCÊ,
     MAIS EFICIÊNCIA PARA SUA
     EMPRESA.</h1>
-  <div class="cards">
-    <div class="card">
-      <h3>INDICAÇÃO</h3>
-      <p> Seja a ponte entre a
-        Singular e empresas que
-        você conhece — clientes,
-        fornecedores, parceiros...
-        Todo mundo que você
-        sabe que merece um
-        plano de saúde que
-        funcione de verdade</p>
-      
-    </div>
-    <div class="card">
-      <h3>NEGOCIAÇÃO</h3>
-      <p>  A gente assume daqui.
-        Cada indicação sua que
-        virar parceria é também
-        uma nova fonte de receita
-        para você. Quanto mais
-        conexões, mais
-        possibilidades de ganho.
-        Simples assim.
-       </p>
-    </div>
-    <div class="card">
-      <h3>PAGAMENTO</h3>
-      <p> você recebe do jeito que
-        preferir. PIX, comissão
-        por contrato, parceria
-        fixa… Aqui você escolhe 
-       o formato que funciona
-        melhor pra você</p>
-    </div>
+    <div class="carousel-wrapper">
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
+        <div class="card-carrosel">
+          <h3>Raio-x de saúde personalizado</h3>
+          <br>
+          <p>Programas de saúde e benefícios desenhados para o seu time,
+            combinando a cultura da empresa, o perfil dos colaboradores
+            e as metas estratégicas. Benefícios que se encaixam na
+            
+            medida certa, proporcionando experiências únicas e mais
+            satisfação.</p>
+          
+        </div>
+        <div class="card-carrosel">
+          <h3>Apoio contínuo e próximo</h3>
+          <br>
+          <p>Entendemos que a gestão de benefícios de saúde é uma
+            jornada contínua. Estaremos sempre ao seu lado, com
+            orientação estratégica e suporte operacional, para que você e
+            seu time tenham uma experiência de cuidado ágil, prática e
+            humanizada.</p>
+        </div>
+        <div class="card-carrosel">
+          <h3>Guia de saúde dedicado</h3>
+          <br>
+          <p>Nossa equipe de especialistas acompanha seus colaboradores
+            de perto: esclarecendo dúvidas, orientando sobre reembolsos,
+            rede credenciada e agendamentos, sempre com um
+            atendimento acolhedor e resolutivo.</p>
+        </div>
 
-    
+        <div class="card-carrosel">
+          <h3>Movimentações cadastrais</h3>
+          <br>
+          <p>Deixe as burocracias com a gente. Gerenciamos inclusões,
+            exclusões e emissões de carteirinhas com agilidade, para que
+            você possa focar no que importa: cuidar de pessoas.</p>
+        </div>
+        <div class="card-carrosel">
+          <h3>Análise de Dados</h3>
+          <br>
+          <p>Transformamos dados em insights, assim você terá o apoio
+            necessário para tomar decisões embasadas, criando
+            programas mais eficazes e impulsionando o sucesso da sua
+            empresa.</p>
+        </div>
+
+        <div class="card-carrosel">
+          <h3>Maior previsibilidade nos reajustes</h3>
+          <br>
+          <p>Diga adeus às surpresas anuais. Unimos dados e nossos
+            conhecimentos sobre o seu time para uma melhor negociação
+            de reajuste junto da sua operadora, garantindo maior
+            previsibilidade.</p>
+        </div>
+
+        <div class="card-carrosel">
+          <h3>Canal único de atendimento para Governo</h3>
+          <br>
+          <p>Atendemos o setor público com soluções sob medida.
+            Oferecemos um canal exclusivo para demandas de órgãos
+            governamentais, garantindo agilidade e atendimento
+            especializado.</p>
+        </div>
+
+        <div class="card-carrosel">
+          <h3>Tempo recorde de resposta nas solicitações</h3>
+          <br>
+          <p>Entendemos a importância de um atendimento ágil e eficiente.
+            Garantimos um tempo recorde de resposta nas solicitações
+            dos nossos clientes, para que suas rotinas não sejam
+            afetadas.</p>
+        </div>
+
+        <div class="card-carrosel">
+          <h3>Assistência jurídica especializada</h3>
+          <br>
+          <p>Conte com nosso time jurídico para apoio em cancelamentos
+            de contratos, medicamentos de alto custo e outras demandas
+            legais. Segurança e orientação em saúde sempre que você
+            precisar.</p>
+        </div>
+      </div>
+      <div class="indicators" id="indicators"></div>
   </div>
- 
+
 </section>
 
 
@@ -258,84 +438,129 @@
   </section>
 
   <!-- Footer <section id="contato"> -->
-  <footer>
+    <footer>
 
-    <section class="top-bar">
-      <a class="logo">
-        <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
-      </a>
-      <div class="reclame-aqui">
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-linkedin"></i>
+      <section class="top-bar">
+        <a class="logo">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
         </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-      </div>
-    </section>
-    
-    <hr>
-    <div class="faleComAgenteDivPai">
-
-      <div class="falaComAgenteFilho">
-        <h2>Fale com a gente</h2>
-        <div class="contato-info">
-          <p>(11) 2436-4766</p>
-          <p>(11) 97709-4841</p>         
-          <p> falecom@eusingularsaude.com.br</p>
-          <p> Atendimento das 9h às 18h (dias úteis) </p>
-          <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+        <div class="reclame-aqui">
+          <a href="https://www.linkedin.com/company/singularsaude" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/eusingularsaude/" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/5511977094841" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
         </div>
-        
-      </div>
-     
-      <div class="footer-links">
-        <h2> <strong>Links Rapidos</strong> </h2>
-        <a >Ajuda</a>
-        <a >Termos de uso</a>
-        <a >Política de privacidade</a>
+      </section>
+      
+      <hr>
+      <div class="faleComAgenteDivPai">
+  
+        <div class="falaComAgenteFilho">
+          <h2>Fale com a gente</h2>
+          <div class="contato-info">
+            <p>(11) 97709-4841</p>         
+            <p>falecom@eusingularsaude.com.br</p>
+            <p>Atendimento das 9h às 18h (dias úteis) </p>
+            <p><strong>Atendimento em outras línguas e libras</strong> </p>
+          </div>
+          
+        </div>
+       
+        <div class="footer-links">
+          <h2> <strong>Links Rapidos</strong> </h2>
+          <a >Ajuda</a>
+          <a >Termos de uso</a>
+          <a >Política de privacidade</a>
+        </div>
+    
       </div>
   
-    </div>
-
-
-      <hr>
-      <div class="paifilhos">
-        <div class="filho2">
-          <!-- Container para imagens à esquerda -->
-          <div class="imagens">
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
-            </a>
-          </div>
-      
-          <!-- Container para textos à direita -->
-          <div class="textos">
-            <p>© 2025 All Rights Reserved Singular Saúde</p>
-            <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+  
+        <hr>
+        <div class="paifilhos">
+          <div class="filho2">
+            <!-- Container para imagens à esquerda -->
+            <div class="imagens">
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+              </a>
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+              </a>
+              <a href="https://www.reclameaqui.com.br/empresa/singular-corretora-de-seguros/">
+                <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+              </a>
+            </div>
+        
+            <!-- Container para textos à direita -->
+            <div class="textosRodaPe">
+              <p>© 2025 All Rights Reserved Singular Saúde</p>
+              <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+            </div>
           </div>
         </div>
+        
+        
+        <!-- Selo do Reclame Aqui com link -->
+       
       </div>
-      
-      
-      <!-- Selo do Reclame Aqui com link -->
-     
-    </div>
-  </footer> 
-    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
-    <i class="bi bi-whatsapp"></i>
+    </footer> 
+      <!-- 
+      <a href="https://wa.me/5511977094841" target="_blank" class="BtnWhatsFixo">
+      <i class="bi bi-whatsapp"></i>
+      -->
 </body>
 </html>
 <script>
+  const carousel = document.getElementById('carousel');
+  const indicators = document.getElementById('indicators');
+  const cards = carousel.querySelectorAll('.card-carrosel');
+  const total = cards.length;
+  let current = 0;
+
+  // Cria indicadores
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('indicator');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+      carousel.scrollTo({
+        left: cards[i].offsetLeft - carousel.offsetWidth / 2 + cards[i].offsetWidth / 2,
+        behavior: 'smooth'
+      });
+      document.querySelectorAll('.indicator').forEach(el => el.classList.remove('active'));
+      dot.classList.add('active');
+      current = i;
+    });
+    indicators.appendChild(dot);
+  }
+
+  // Atualiza indicador ao scroll manual
+  carousel.addEventListener('scroll', () => {
+    let center = carousel.scrollLeft + carousel.offsetWidth / 2;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    cards.forEach((card, i) => {
+      let cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      let distance = Math.abs(center - cardCenter);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = i;
+      }
+    });
+
+    document.querySelectorAll('.indicator').forEach(el => el.classList.remove('active'));
+    if (indicators.children[closestIndex]) {
+      indicators.children[closestIndex].classList.add('active');
+    }
+  });
+
   function toggleDropdown(element) {
     const resposta = element.nextElementSibling;
     const icone = element.querySelector("i");
@@ -350,4 +575,13 @@
       icone.classList.add("bi-chevron-down");
     }
   }
+
+  const toggleBtn = document.getElementById('menu-toggle');
+  const headerNav = document.querySelector('.header-nav');
+  const headerLogo = document.querySelector('.header-logo');
+
+  toggleBtn.addEventListener('click', () => {
+    headerNav.classList.toggle('active');
+    headerLogo.classList.toggle('active');
+  });
 </script>

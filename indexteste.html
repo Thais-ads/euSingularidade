@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultoria</title>
+  <style>
+    /* Reset básico: remove margens e espaçamentos padrão de todos os elementos e define box-sizing */
+    * {
+      margin: 0;           /* Remove margem padrão */
+      padding: 0;          /* Remove padding padrão */
+      box-sizing: border-box; /* Faz com que o padding e border sejam incluídos na largura/altura totais */
+    }
+  
+    /* Estilo para body e html, que são os elementos principais da página */
+    body, html {
+      width: 100%;             /* Ocupa 100% da largura da viewport */
+      height: 100%;            /* Ocupa 100% da altura da viewport */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte principal da página */
+      background-color: #000;  /* Fundo preto */
+    }
+  
+    /* Container principal da página */
+    .container {
+      position: relative;      /* Para posicionar elementos filhos com position:absolute */
+      width: 100%;             /* Ocupa 100% da largura do elemento pai */
+      max-width: 900px;        /* Limita a largura máxima em 900px */
+      margin: auto;            /* Centraliza horizontalmente */
+      overflow: hidden;        /* Esconde qualquer conteúdo que ultrapasse o container */
+      border-radius: 16px;     /* Bordas arredondadas */
+    }
+  
+    /* Imagem ou elemento de fundo */
+    .background {
+      width: 100%;             /* Largura total do container */
+      height: auto;            /* Altura automática para manter proporção */
+      display: block;          /* Remove espaçamento embaixo de imagens (inline por padrão) */
+      border-radius: 16px;     /* Bordas arredondadas para combinar com o container */
+    }
+  
+    /* Texto posicionado sobre a imagem (ou fundo) */
+    .text {
+      position: absolute;      /* Posicionamento absoluto dentro do container */
+      color: #fff;             /* Cor branca para o texto */
+      font-weight: bold;       /* Texto em negrito */
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Sombra para melhorar legibilidade do texto */
+      font-size: 1.1rem;       /* Tamanho da fonte relativo ao root */
+      line-height: 1.4;        /* Espaçamento entre linhas */
+    }
+  
+
+    /* Estilo para elementos span dentro do texto */
+    .text span {
+      font-style: italic;      /* Texto em itálico */
+      font-weight: normal;     /* Peso normal (remove o negrito herdado) */
+    }
+  
+    /* Posicionamento da área de texto 'consultoria' */
+    .consultoria {
+      top: 40%;                /* 10% do topo do container */
+      left:10%;                /* 5% da borda esquerda do container */
+    }
+  
+    /* Posicionamento da linha inclinada antes do texto consultoria */
+    .consultoria::before {
+      content: "";             /* Gera conteúdo vazio (linha) */
+      position: absolute;      /* Posiciona relativamente ao .consultoria */
+      width: 80px;             /* Largura da linha */
+      height: 3px;             /* Altura da linha */
+      background: white;       /* Cor branca */          
+      left: 100px;             /* Posição para a esquerda da área de texto */
+      transform-origin: left center; /* Origem da transformação */
+      transform: rotate(-30deg); /* Rotaciona a linha em 20 graus para dar inclinação */
+    }
+
+
+
+
+
+    /* Pequena bolinha circular depois da linha do 'solucoes' */
+    .consultoria::after {
+      content: "";
+      position: absolute;
+      width: 10px;             /* Largura da bolinha */
+      height: 10px;            /* Altura da bolinha */
+      background: white;       /* Cor branca */
+      border-radius: 50%;      /* Deixa a div circular */
+      bottom: 143px;            /* Alinha verticalmente com a linha */
+      right: -45px;            /* Posiciona horizontalmente à direita, ajustado para alinhar com a ponta da linha */
+    }
+
+
+  
+    /* Posicionamento da área de texto 'solucoes' */
+    .solucoes {
+      top:20%;                /* 10% do topo */
+      right: 10%;               /* 5% da borda direita */
+      text-align: right;       /* Texto alinhado à direita */
+    }
+  
+    /* Linha inclinada antes do texto 'solucoes' */
+    .solucoes::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: white;
+      right: 20px;            /* Desloca a linha para fora à direita */
+      transform-origin: left center;
+      transform: rotate(-150deg); /* Rotaciona a linha para -20 graus */
+    }
+    
+  
+
+
+    /* Pequena bolinha circular depois da linha do 'solucoes' */
+    .solucoes::after {
+      content: "";
+      position: absolute;
+      width: 10px;             /* Largura da bolinha */
+      height: 10px;            /* Altura da bolinha */
+      background: white;       /* Cor branca */
+      border-radius: 50%;      /* Deixa a div circular */
+      bottom: 143px;            /* Alinha verticalmente com a linha */
+      right: 168px;            /* Posiciona horizontalmente à direita, ajustado para alinhar com a ponta da linha */
+    }
+
+
+   
+    /*lINHA NORMAL*/
+    .line {
+        width: 100px;
+        height: 3px;
+        background: #fff;
+        margin-bottom: 55px;
+        }
+         .consultoria .line {
+        margin-left: 0;
+        }
+
+        .solucoes .line,
+        .suporte .line {
+        margin-left: auto;
+       
+        }
+
+         /*Texto linha Suporte continuo*/
+    .suporte {
+        margin-top: 55px;
+        bottom: 10%;             /* 10% da base do container */
+        right: 15%;              /* 15% da borda direita */
+        text-align: right;
+                    
+        }
+
+     
+    /* Linha inclinada antes do texto 'suporte' */
+    .suporte::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 3px;
+      background: white;
+      bottom: 50px;            /* 50px da base do container */
+      right: 76px;             /* 76px da borda direita */
+      transform-origin: left center;
+      transform: rotate(-45deg); /* Rotaciona a linha em -45 graus */
+    }
+  
+    /* Pequena bolinha circular depois da linha do 'suporte' */
+    .suporte::after {
+      content: "";
+      position: absolute;
+      width: 10px;             /* Largura da bolinha */
+      height: 10px;            /* Altura da bolinha */
+      background: white;       /* Cor branca */
+      border-radius: 50%;      /* Deixa a div circular */
+      bottom: 50px;            /* Alinha verticalmente com a linha */
+      right: 148px;            /* Posiciona horizontalmente à direita, ajustado para alinhar com a ponta da linha */
+    }
+
+
+    
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <img src="Estilos/Img/image_home/home-01.png" alt="Consultoria" class="background">
+
+    <div class="text consultoria">
+      <div class="line"></div>
+      <p>CONSULTORIA<br>ESPECIALIZADA</p>
+    </div>
+
+    <div class="text solucoes">
+      <div class="line"></div>
+      <p>SOLUÇÕES<br>PERSONALIZADAS</p>
+    </div>
+
+    <div class="text suporte">
+      <div class="line"></div>
+      <p>GESTÃO E<br>SUPORTE CONTÍNUO</p>
+    </div>
+  </div>
+</body>
+
+</html>

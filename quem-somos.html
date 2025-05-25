@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singular Saúde - Corretora de Plano de Saúde</title>
+  <title>A melhor experiência na escolha e gestão do seu plano de saúde | Singular Saúde</title>
+  <meta name="description" content="Descubra como a Singular simplifica o acesso à saúde com tecnologia, atendimento personalizado e soluções sob medida para você, sua família e sua empresa.">
   <link rel="stylesheet" href="./Estilos/Contato_styles.css">
   <link rel="stylesheet" href="./Estilos/styles.css">
   <link rel="icon" href="./Estilos/Img/image_home/Icon.ico" type="image/x-icon">
@@ -23,6 +24,56 @@
     margin: 50px 0px 100px 0px;
   }
   
+  .QuemSomosSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.quemSomosImg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.quemSomosTexto {
+  font-size: 20px;
+  max-width: 900px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.quemSomosAutor {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .quemSomosTexto {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .quemSomosImg {
+    max-width: 100%;
+  }
+
+  .QuemSomosSection {
+    padding: 20px 15px;
+  }
+}
+.img-perfil {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%; /* se quiser manter arredondado */
+}
+
 </style>
 
 <body>
@@ -37,10 +88,11 @@
       </div>
   
       <nav class="header-nav-pai">
+        <i class="bi bi-list" id="menu-toggle"></i>
         <ul class="header-nav">
             <!-- Item com dropdown -->
             <li class="dropdown">
-                <a href="#sobre">Sobre <i class="bi bi-chevron-down"></i></a>
+                <a>Sobre <i class="bi bi-chevron-down"></i></a>
                 <ul class="submenu">
                     <li><a href="./singular.html">A Singular</a></li>
                     <li><a href="./carreiras.html">Carreiras</a></li>
@@ -48,10 +100,10 @@
                 </ul>
             </li>
     
-            <li><a href="./index.html">Singular</a></li>
+            <li><a href="./index.html">Singularidade</a></li>
             <li><a href="./quem-somos.html">Quem Somos?</a></li>
             <li class="dropdown">
-              <a href="#sobre">Ajuda <i class="bi bi-chevron-down"></i></a>
+              <a>Ajuda <i class="bi bi-chevron-down"></i></a>
               <ul class="submenu">
                   <li><a href="./contato.html">Contato</a></li>
                   <li><a href="./FAQ.html">FAQ</a></li>
@@ -60,7 +112,7 @@
             
             <!-- CTA Separado -->
             <li class="header-cta">
-                <a href="https://wa.me/5511949395089" class="btn-chamada">Fale com a Singular</a>
+                <a href="https://wa.me/5511977094841" class="btn-chamada">Fale com a Singular</a>
             </li>
         </ul>
       </nav>
@@ -76,11 +128,11 @@
         <p>Nascemos para revolucionar o mercado da saúde e libertar as pessoas da complexidade.</p>
         <!-- Imagem adicional do Hero -->
          <!-- CTA: redireciona para /contato -->
-         <a href="https://wa.me/5511949395089" class="cta-btn" style="margin-bottom: 40px;">Agende uma conversa</a> 
+         <a href="https://wa.me/5511977094841" class="cta-btn" style="margin-bottom: 40px;">Agende uma conversa</a> 
         
   
          <div class="destaque-image">
-          <img src="./Estilos/Img/image_quemsomos/pag-quem-somos.png" alt="Plano de Saúde Ideal">
+          <img src="./Estilos/Img/image_quemsomos/quem-somos.png" alt="Plano de Saúde Ideal">
          </div>
   
       </div>
@@ -90,7 +142,7 @@
       <h1 style="color: black;">NOSSOS PILARES</h1>
       <div class="cards">
         <div class="card">
-          <h3>EXPERIENCIA
+          <h3>EXPERIÊNCIA
             DO CLIENTE</h3>
           <p> Descomplicar é o nosso
             lema. Acreditamos que
@@ -132,99 +184,113 @@
       </div>
     </section>
 
-    <section class="QuemSomosSection">
-        <img style="width: 600px;" src="./Estilos/Img/image_quemsomos/FUNDADORES.png" alt="Melhor Corretora de Saúde">
-         <p style="font-size: 20px; width: 900px;">“A Singular nasceu com um propósito claro: transformar
+    <section class=" QuemSomosSection ">
+        
+          <img class="img-perfil" src="Estilos/Img/image_quemsomos/perfil1_recortado.png" alt="Melhor Corretora de Saúde">
+
+         <p  class="quemSomosTexto" style="font-size: 20px; width: 900px;">“A Singular nasceu com um propósito claro: transformar
           a forma como as pessoas se conectam com a saúde,
           oferecendo uma <strong>experiência única</strong>, descomplicada e,
           acima de tudo, humana.”</p>
           <br>
-          <p>DOUGLAS SILVA, COO & FOUNDER</p>
+          <p class="quemSomosAutor">DOUGLAS SILVA, COO & FOUNDER</p>
     </section>
 
     <section id="sobre">
       <h2>DEIXE O PASSADO PARA TRÁS</h2>   
       <!-- CTA: redireciona para /contato -->
-      <a href="https://wa.me/5511949395089" class="cta-btn-white">Vem para Singular</a>
+      <a href="https://wa.me/5511977094841" class="cta-btn-white">Vem para Singular</a>
     </section>
 
 
   
   <!-- Footer <section id="contato"> -->
-  <footer>
+    <footer>
 
-    <section class="top-bar">
-      <a class="logo">
-        <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
-      </a>
-      <div class="reclame-aqui">
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-linkedin"></i>
+      <section class="top-bar">
+        <a class="logo">
+          <img src="./Estilos/Img/image_home/logo_horizontal_azul.png" alt="Logo" style="height: 40px;">
         </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://wa.me/5511949395089" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-      </div>
-    </section>
-    
-    <hr>
-    <div class="faleComAgenteDivPai">
-
-      <div class="falaComAgenteFilho">
-        <h2>Fale com a gente</h2>
-        <div class="contato-info">
-          <p>(11) 2436-4766</p>
-          <p>(11) 97709-4841</p>         
-          <p> falecom@eusingularsaude.com.br</p>
-          <p> Atendimento das 9h às 18h (dias úteis) </p>
-          <p> <strong>Atendimento em outras línguas e libras</strong> </p>
+        <div class="reclame-aqui">
+          <a href="https://www.linkedin.com/company/singularsaude" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/eusingularsaude/" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/5511977094841" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
         </div>
-        
-      </div>
-     
-      <div class="footer-links">
-        <h2> <strong>Links Rapidos</strong> </h2>
-        <a >Ajuda</a>
-        <a >Termos de uso</a>
-        <a >Política de privacidade</a>
+      </section>
+      
+      <hr>
+      <div class="faleComAgenteDivPai">
+  
+        <div class="falaComAgenteFilho">
+          <h2>Fale com a gente</h2>
+          <div class="contato-info">
+            <p>(11) 97709-4841</p>         
+            <p>falecom@eusingularsaude.com.br</p>
+            <p>Atendimento das 9h às 18h (dias úteis) </p>
+            <p><strong>Atendimento em outras línguas e libras</strong> </p>
+          </div>
+          
+        </div>
+       
+        <div class="footer-links">
+          <h2> <strong>Links Rapidos</strong> </h2>
+          <a >Ajuda</a>
+          <a >Termos de uso</a>
+          <a >Política de privacidade</a>
+        </div>
+    
       </div>
   
-    </div>
-
-
-      <hr>
-      <div class="paifilhos">
-        <div class="filho2">
-          <!-- Container para imagens à esquerda -->
-          <div class="imagens">
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
-            </a>
-            <a target="_blank">
-              <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
-            </a>
-          </div>
-      
-          <!-- Container para textos à direita -->
-          <div class="textos">
-            <p>© 2025 All Rights Reserved Singular Saúde</p>
-            <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+  
+        <hr>
+        <div class="paifilhos">
+          <div class="filho2">
+            <!-- Container para imagens à esquerda -->
+            <div class="imagens">
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/GPTW.png" alt="Selo GPTW" style="height: 40px;">
+              </a>
+              <a target="_blank">
+                <img src="./Estilos/Img/image_home/top-100-startups.png" alt="Top 100 Startups" style="height: 40px;">
+              </a>
+              <a href="https://www.reclameaqui.com.br/empresa/singular-corretora-de-seguros/">
+                <img src="./Estilos/Img/image_home/reclameaqui.png" alt="Selo Reclame Aqui" style="height: 40px;">
+              </a>
+            </div>
+        
+            <!-- Container para textos à direita -->
+            <div class="textosRodaPe">
+              <p>© 2025 All Rights Reserved Singular Saúde</p>
+              <p>CNPJ: 43.612.386/0001-03 | SUSEP 201074905</p>
+            </div>
           </div>
         </div>
+        
+        
+        <!-- Selo do Reclame Aqui com link -->
+       
       </div>
-      
-      
-      <!-- Selo do Reclame Aqui com link -->
-     
-    </div>
-  </footer> 
-    <a href="https://wa.me/5511949395089" target="_blank" class="BtnWhatsFixo">
-    <i class="bi bi-whatsapp"></i>
+    </footer> 
+        <!-- 
+      <a href="https://wa.me/5511977094841" target="_blank" class="BtnWhatsFixo">
+      <i class="bi bi-whatsapp"></i>
+      -->
 </body>
 </html>
+
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+  const headerNav = document.querySelector('.header-nav');
+  const headerLogo = document.querySelector('.header-logo');
+
+  toggleBtn.addEventListener('click', () => {
+    headerNav.classList.toggle('active');
+    headerLogo.classList.toggle('active');
+  });
+</script>
