@@ -33,7 +33,37 @@ document.addEventListener("DOMContentLoaded", function() {
         behavior: 'smooth'
       });
     }
-    // Intervalo para animação contínua
+    
     setInterval(slideLogos, 20);
   });
   
+
+// NavBar Touch Iphones
+  const toggleBtn = document.getElementById('menu-toggle');
+  const headerNav = document.querySelector('.header-nav');
+  const headerLogo = document.querySelector('.header-logo');
+
+  toggleBtn.addEventListener('click', () => {
+    headerNav.classList.toggle('active');
+    headerLogo.classList.toggle('active');
+  });
+
+  // Lógica para dropdowns funcionarem com toque
+  const dropdownLinks = document.querySelectorAll('.dropdown > a');
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // Evita navegação
+      const submenu = this.nextElementSibling;
+
+      // Fecha outros submenus abertos (opcional)
+      document.querySelectorAll('.submenu').forEach(el => {
+        if (el !== submenu) {
+          el.classList.remove('show');
+        }
+      });
+
+      submenu.classList.toggle('show');
+    });
+  });
+
