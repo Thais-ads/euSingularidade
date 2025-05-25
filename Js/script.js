@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 // NavBar Touch Iphones
+function funcaoNavBar() {
   const toggleBtn = document.getElementById('menu-toggle');
   const headerNav = document.querySelector('.header-nav');
   const headerLogo = document.querySelector('.header-logo');
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
       e.preventDefault(); // Evita navegação
       const submenu = this.nextElementSibling;
 
-      // Fecha outros submenus abertos (opcional)
+      // Fecha outros submenus
       document.querySelectorAll('.submenu').forEach(el => {
         if (el !== submenu) {
           el.classList.remove('show');
@@ -66,4 +67,17 @@ document.addEventListener("DOMContentLoaded", function() {
       submenu.classList.toggle('show');
     });
   });
+
+  // Fecha dropdowns ao clicar fora
+  document.addEventListener('click', function (event) {
+    const isClickInsideDropdown = event.target.closest('.dropdown');
+
+    if (!isClickInsideDropdown) {
+      document.querySelectorAll('.submenu').forEach(el => {
+        el.classList.remove('show');
+      });
+    }
+  });
+}
+
 
